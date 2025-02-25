@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website de Prueba</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Mi Website de Prueba</h1>
+  </header>
+  <div class="content">
+    <h2>Datos de Ejemplo</h2>
+    <p>A continuación, se muestra una tabla con algunos datos falsos:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Juan Pérez</td>
+          <td>juan@example.com</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>María García</td>
+          <td>maria@example.com</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Carlos López</td>
+          <td>carlos@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+    <button id="saludoBtn">Mostrar saludo</button>
+    <p id="saludo"></p>
+  </div>
+  
+  <!-- Código del Chat de Coze -->
+  <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.1.0-beta.3/libs/oversea/index.js"></script>
+  <script>
+    new CozeWebSDK.WebChatClient({
+      config: {
+        bot_id: '7473151263346475013',
+      },
+      componentProps: {
+        title: 'Coze',
+      },
+      auth: {
+        type: 'token',
+        token: 'pat_dhd1T1bXxH2AcsP1RUSXj2m4WBnD0kYNVvaY8aefJLlDyRGQBpKe3V6syAe30R62',
+        onRefreshToken: function () {
+          return 'pat_dhd1T1bXxH2AcsP1RUSXj2m4WBnD0kYNVvaY8aefJLlDyRGQBpKe3V6syAe30R62'
+        }
+      }
+    });
+  </script>
+
+  <script src="app.js"></script>
+</body>
+</html>
